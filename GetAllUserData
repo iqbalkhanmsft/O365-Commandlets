@@ -1,6 +1,6 @@
 # THIS CODE IS STRICTLY FOR DEVELOPMENT PURPOSES AND NOT TO BE CONSIDERED FOR PRODUCTION PURPOSES.
 
-# This script returns all data from the Get-MsolUser module.
+# This script returns all data from the Get-MsolUser module, plus how old the user's password is in days format.
 # https://docs.microsoft.com/en-us/powershell/module/msonline/get-msoluser?view=azureadps-1.0
 
 ########## INSTALL LIBRARIES ##########
