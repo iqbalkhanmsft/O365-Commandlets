@@ -3,6 +3,9 @@
 # This script returns all data from the Get-MsolUser module, plus how old the user's password is in days format.
 # https://docs.microsoft.com/en-us/powershell/module/msonline/get-msoluser?view=azureadps-1.0
 
+
+# To generate the user data report, you will need to change the file directory reference on line 30.
+
 ########## INSTALL LIBRARIES ##########
 
 # Install Azure AD library if not already installed.
