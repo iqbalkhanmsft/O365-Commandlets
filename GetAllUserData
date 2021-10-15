@@ -1,0 +1,27 @@
+# THIS CODE IS STRICTLY FOR DEVELOPMENT PURPOSES AND NOT TO BE CONSIDERED FOR PRODUCTION PURPOSES.
+
+# This script returns all data from the Get-MsolUser module.
+# https://docs.microsoft.com/en-us/powershell/module/msonline/get-msoluser?view=azureadps-1.0
+
+########## INSTALL LIBRARIES ##########
+
+# Install Azure AD library if not already installed.
+# Powershell Documentation: https://www.powershellgallery.com/packages/AzureAD/2.0.2.140
+
+Install-Module -Name AzureAD -Scope CurrentUser
+
+# Install MSOnline library if not already installed.
+# Powershell Documentation: https://www.powershellgallery.com/packages/MSOnline/1.1.183.57
+
+Install-Module MSOnline -Scope CurrentUser
+
+########## RUN CODE ##########
+
+# Authenticate to MSFT.
+
+Connect-MsolService
+
+# Run code to generate password reset information.
+# Code generates display name, timestamp of when they last changed their password, and how many old their password has been in days.
+
+Get-MsolUser -All | select * | Export-CSV 'C:\Users\Iqbal Khan\OneDrive - Microsoft\Desktop\UserDataExport.csv' -Force -NoTypeInformation
